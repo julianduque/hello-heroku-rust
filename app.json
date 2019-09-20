@@ -1,0 +1,11 @@
+{
+    "name": "hello-heroku-rust",
+    "description": "A multithreaded web application from The Rust Book",
+    "repository": "https://github.com/julianduque/hello-heroku-rust",
+    "keywords": ["rust"],
+    "buildpacks": [
+        {
+            "url": "https://github.com/emk/heroku-buildpack-rust"
+        }
+    ]
+}

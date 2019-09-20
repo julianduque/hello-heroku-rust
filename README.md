@@ -9,3 +9,4 @@ This is the multi-threaded web application from [The Rust Programming Language B
 
 ## Manual Deploy
 
+Check the [Heroku Buildpack Documentation](https://github.com/emk/heroku-buildpack-rust#using-this-buildpack)

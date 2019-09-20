@@ -1,16 +1,15 @@
 use hello_heroku_rust::ThreadPool;
+use std::env;
 use std::fs;
 use std::io::prelude::*;
 use std::net::TcpListener;
 use std::net::TcpStream;
 use std::thread;
 use std::time::Duration;
-use std::env;
 
 fn main() {
-    let port = env::var("PORT")
-        .unwrap_or_else(|_| "7878".to_string());
-    
+    let port = env::var("PORT").unwrap_or_else(|_| "7878".to_string());
+
     let listener = TcpListener::bind(format!("0.0.0.0:{}", port)).unwrap();
     let pool = ThreadPool::new(4);
 

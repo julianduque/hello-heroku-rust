@@ -11,7 +11,7 @@ fn main() {
     let port = env::var("PORT")
         .unwrap_or_else(|_| "7878".to_string());
     
-    let listener = TcpListener::bind(format!("127.0.0.1:{}", port)).unwrap();
+    let listener = TcpListener::bind(format!("0.0.0.0:{}", port)).unwrap();
     let pool = ThreadPool::new(4);
 
     for stream in listener.incoming() {
